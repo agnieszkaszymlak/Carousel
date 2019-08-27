@@ -1,14 +1,16 @@
 <!DOCTYPE html>
-<html lang="en" >
-<head>
-  <meta charset="UTF-8">
-  <title>Zad-10.4_test</title>
-  <meta name="viewport" content="width=device-width"><link rel='stylesheet' href='https://npmcdn.com/flickity@2/dist/flickity.css'>
-<link rel="stylesheet" href="./style.css">
-</head>
-<body>
-<!-- partial:index.partial.html -->
-<body>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <title>Visited places</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="vendor/normalize.css">
+    <link rel="stylesheet" type="text/css" href="vendor/flickity.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+  </head>
+
+  <body>
 
   <button class="button button--restart">Start over</button>
 
@@ -105,12 +107,13 @@
     ];
     </script>
 
-  </body>
-<!-- partial -->
-  <script src='https://npmcdn.com/flickity@2/dist/flickity.pkgd.js'></script>
-<script src='https://unpkg.com/flickity-hash@1/hash.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.js'></script>
-<script  src="./script.js"></script>
+    <script src="vendor/flickity.js"></script>
+    <script src="https://unpkg.com/flickity-hash@1/hash.js"></script>
+    <script src="vendor/mustache.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDSc9IZxsZpnH234kR8CeHO9TmFWwVV1Jk&callback=initMap"></script>
+    <script src="js/script.js"></script>
 
-</body>
+  </body>
+
+
 </html>
