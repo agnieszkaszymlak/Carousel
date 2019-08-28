@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
   <head>
     <meta charset="utf-8">
     <title>Visited places</title>
@@ -9,111 +8,28 @@
     <link rel="stylesheet" type="text/css" href="vendor/flickity.css" media="screen">
     <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
-
   <body>
-
-  <button class="button button--restart">Start over</button>
-
-    <div class="main-carousel" id="carousel">
-
+    <h1>Motivational carousel</h1>
+    <div class="button-group">
+    <button class="button">Restart</button>
     </div>
-
+    <div class="carousel"></div>
     <div class="progress-bar"></div>
-
+    <a href="#carousel-cell1"></a>
+    <a href="#carousel-cell2"></a>
+    <a href="#carousel-cell3"></a>
+    <a href="#carousel-cell4"></a>
+    <a href="#carousel-cell5"></a>
+    <script id="template_item" type="x-tmpl-mustache">
+        <div class="carousel-cell" id="carousel-cell{{ id }}" style="background-image: url('{{ image }}');">
+            <div class="container"><header>{{ title }}</header></div>
+        </div>
+    </script>
     <div id="map"></div>
-
-    <script id="template-slide-item" type="x-tmpl-mustache">
-    <div class="carousel-cell" id="carousel-cell{{index}}">
-      <div class="container" style="background-image: url( {{image}} )">
-        <h2> {{title}} </h2>
-        {{{description}}}
-      </div>
-    </div>
-    </script>
-
-
-    <script>
-    var slides = [
-    	{
-    		image: 'https://images.pexels.com/photos/10922/pexels-photo-10922.jpeg?auto=compress&cs=tinysrgb&h=350',
-    		title: 'RZYM',
-    		description: '<p>2015 rok</p>',
-        index: 1,
-        coords: {lat: 41.859386, lng: 12.489513}
-    	},
-      {
-        image: 'https://images.pexels.com/photos/164431/pexels-photo-164431.jpeg?auto=compress&cs=tinysrgb&h=350',
-        title: 'SPLIT',
-        description: '<p>2015 rok</p>',
-        index: 2,
-        coords: {lat: 43.509630, lng: 16.444276}
-      },
-    	{
-    		image: 'https://images.pexels.com/photos/967292/pexels-photo-967292.jpeg?auto=compress&cs=tinysrgb&h=350',
-    		title: 'AMSTERDAM, HAGA',
-    		description: '<p>2015 rok</p>',
-        index: 3,
-        coords: {lat: 52.367564, lng: 4.846429}
-    	},
-      {
-        image: 'https://images.pexels.com/photos/998736/pexels-photo-998736.jpeg?auto=compress&cs=tinysrgb&h=350',
-        title: 'BARCELONA',
-        description: '<p>2016 rok</p>',
-        index: 4,
-        coords: {lat: 41.400435, lng: 2.158378}
-      },
-      {
-        image: 'https://images.pexels.com/photos/414041/pexels-photo-414041.jpeg?auto=compress&cs=tinysrgb&h=350',
-        title: 'PAFOS',
-        description: '<p>2016 rok</p>',
-        index: 5,
-        coords: {lat: 34.770069, lng: 32.422882}
-      },
-      {
-        image: 'https://images.pexels.com/photos/161907/venice-grand-canal-water-boats-161907.jpeg?auto=compress&cs=tinysrgb&h=350',
-        title: 'WENECJA',
-        description: '<p>2017 rok</p>',
-        index: 6,
-        coords: {lat: 45.436010, lng: 12.333638}
-      },
-      {
-        image: 'https://images.pexels.com/photos/51947/tuscany-grape-field-nature-51947.jpeg?auto=compress&cs=tinysrgb&h=350',
-        title: 'TOSKANIA',
-        description: '<p>2017 rok</p>',
-        index: 7,
-        coords: {lat: 43.726445, lng: 11.245357}
-      },
-      {
-        image: 'https://images.pexels.com/photos/248771/pexels-photo-248771.jpeg?auto=compress&cs=tinysrgb&h=350',
-        title: 'CINQUE TERRE',
-        description: '<p>2017 rok</p>',
-        index: 8,
-        coords: {lat: 44.131134, lng: 9.700525}
-      },
-      {
-        image: 'https://images.pexels.com/photos/263041/pexels-photo-263041.jpeg?auto=compress&cs=tinysrgb&h=350',
-        title: 'BARI',
-        description: '<p>2018 rok</p>',
-        index: 9,
-        coords: {lat: 41.123707, lng: 16.842931}
-      },
-      {
-        image: 'https://images.pexels.com/photos/161074/vienna-st-charles-s-church-downtown-church-161074.jpeg?auto=compress&cs=tinysrgb&h=350',
-        title: 'WIEDEŃ',
-        description: '<p>2018 rok</p>',
-        index: 10,
-        coords: {lat: 48.201839, lng: 16.346405}
-      }
-    ];
-    </script>
-
     <script src="vendor/flickity.js"></script>
     <script src="https://unpkg.com/flickity-hash@1/hash.js"></script>
     <script src="vendor/mustache.js"></script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDSc9IZxsZpnH234kR8CeHO9TmFWwVV1Jk&callback=initMap"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDP5JVfVABLKoCjQGQwIChZOIC59YH2rt8&callback=initMap"></script>
     <script src="js/script.js"></script>
-
   </body>
-
-
 </html>
