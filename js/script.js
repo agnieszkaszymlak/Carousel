@@ -9,7 +9,7 @@
                id: 1,
                title: 'Dream house - Photo 1',
                image: "https://images.pexels.com/photos/2091166/pexels-photo-2091166.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=940",
-               coords: {lat: 49.887314, lng: 19.090301}
+               coords: {lat: 49.894314, lng: 19.067509}
             },
             {
                id: 2,
@@ -90,7 +90,7 @@ var par = true;
     
   window.initMap = function() {
   var map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 10,
+    zoom: 15,
     center: slideList[flkty.selectedIndex].coords
   });
   for(var i = 0; i < slideList.length; i++) {
